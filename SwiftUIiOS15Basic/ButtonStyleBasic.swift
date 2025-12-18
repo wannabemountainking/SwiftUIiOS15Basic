@@ -80,7 +80,7 @@ struct ButtonStyleBasic: View {
                 Button {
                     //action
                 } label: {
-                    Text("Glass ButtonStyle")
+                    Text("Extralarge ControlSize")
                 }
                 .frame(height: 50)
                 .frame(maxWidth: .infinity)
@@ -88,6 +88,47 @@ struct ButtonStyleBasic: View {
                 .controlSize(.extraLarge)
             }
             
+            Button {
+                // action
+            } label: {
+                Text("Large ControlSize")
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+
+            if #available(iOS 26.0, *) {
+                Button {
+                    // action
+                } label: {
+                    Text("Regular ControlSize")
+                }
+                .frame(height: 50)
+                .frame(maxWidth: .infinity)
+                .buttonStyle(.glassProminent)
+                .controlSize(.regular)
+            }
+            
+            Button {
+                // action
+            } label: {
+                Text("Small ControlSize")
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .buttonStyle(.borderedProminent)
+            .controlSize(.small)
+            
+            Button {
+                // action
+            } label: {
+                Text("Mini ControlSize")
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .buttonStyle(.bordered)
+            .controlSize(.mini)
         }
     }
 }
