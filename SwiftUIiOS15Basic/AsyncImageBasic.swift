@@ -47,21 +47,14 @@ struct AsyncImageBasic: View {
                 image
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-<<<<<<< HEAD
             case .failure(let error):
-=======
-            case .failure(_):
->>>>>>> origin/main
-                Text("Image가 로드되지 않습니다")
+                Text(error.localizedDescription)
                     .font(.headline)
             default:
                 Text("Image가 로드되지 않습니다")
                     .font(.headline)
             }
         }
-        
-        
-
     }
 }
 
